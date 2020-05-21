@@ -10,15 +10,29 @@ export default function LeaderBoard({ playerStats }: LeaderBoardProps) {
     return null;
   }
 
+  // TODO make this a table
   return (
-    <ul>
-      {Object.entries(playerStats).map(([name, playerStat]) => {
-        return (
-          <li>
-            {name} {playerStat.total}
-          </li>
-        );
-      })}
-    </ul>
+    <table>
+      <thead>
+        <tr>
+          <th>Player</th>
+          <th>Total</th>
+          <th>Avg</th>
+          <th>Longest</th>
+        </tr>
+      </thead>
+      <tbody>
+        {Object.entries(playerStats).map(([name, playerStat]) => {
+          return (
+            <tr>
+              <td>{name}</td>
+              <td>{playerStat.total}</td>
+              <td>{playerStat.avg}</td>
+              <td>{playerStat.max}</td>
+            </tr>
+          );
+        })}
+      </tbody>
+    </table>
   );
 }
