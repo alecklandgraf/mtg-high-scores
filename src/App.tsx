@@ -2,10 +2,11 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import cockatriceStats, { Stats } from "./cockatriceStats";
 import sampleChat from "./sampleChat";
+import LeaderBoard from "./LeaderBoard";
 
 function App() {
   const [chat, setChat] = useState("");
-  const [stats, setStats] = useState<null | Stats>(null);
+  const [stats, setStats] = useState<undefined | Stats>();
 
   function handleLoadSample() {
     setChat(sampleChat);
@@ -21,7 +22,7 @@ function App() {
       <header className="App-header">
         MTG Player Stats
         <button onClick={handleLoadSample}>load sample</button>
-        <pre className="pre">{JSON.stringify(stats, null, 2)}</pre>
+        <LeaderBoard playerStats={stats} />
       </header>
     </div>
   );
