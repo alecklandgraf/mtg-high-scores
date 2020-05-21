@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import cockatriceStats, { Stats } from "./cockatriceStats";
 import sampleChat from "./sampleChat";
@@ -20,9 +19,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <button onClick={handleLoadSample}>load sample chat history</button>
-        <pre>{JSON.stringify(stats, null, 2)}</pre>
+        MTG Player Stats
+        <button onClick={handleLoadSample}>load sample</button>
+        <pre className="pre">{JSON.stringify(stats, null, 2)}</pre>
       </header>
     </div>
   );
