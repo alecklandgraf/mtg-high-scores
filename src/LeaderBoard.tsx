@@ -10,7 +10,16 @@ export default function LeaderBoard({ playerStats }: LeaderBoardProps) {
     return null;
   }
 
-  // TODO make this a table
+  const stats = Object.entries(playerStats).map(([name, playerStat]) => ({
+    name,
+    ...playerStat,
+  }));
+  stats.sort(
+    (a, b) =>
+      new Date(`2020-01-01 ${b.total}`).getTime() -
+      new Date(`2020-01-01 ${a.total}`).getTime()
+  );
+
   return (
     <table>
       <thead>
@@ -22,13 +31,13 @@ export default function LeaderBoard({ playerStats }: LeaderBoardProps) {
         </tr>
       </thead>
       <tbody>
-        {Object.entries(playerStats).map(([name, playerStat]) => {
+        {stats.map(({ name, total, avg, max }) => {
           return (
             <tr>
               <td>{name}</td>
-              <td>{playerStat.total}</td>
-              <td>{playerStat.avg}</td>
-              <td>{playerStat.max}</td>
+              <td>{total}</td>
+              <td>{avg}</td>
+              <td>{max}</td>
             </tr>
           );
         })}
