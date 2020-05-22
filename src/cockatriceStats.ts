@@ -21,7 +21,7 @@ export type Stats = {
 export default function cockatriceStats(chat: string): Stats {
   const lines = chat.split("\n");
   const turns = lines.filter((l) => l.endsWith("turn."));
-  const r1 = /\[(.*)]\s(\w+)/;
+  const r1 = /\[(.*)]\s([a-zA-Z-]+)/;
   //      time stamp    player name
   type Players = {
     [key: string]: number[];
