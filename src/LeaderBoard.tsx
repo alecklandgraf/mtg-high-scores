@@ -5,6 +5,28 @@ type LeaderBoardProps = {
   playerStats?: Stats;
 };
 
+type MappedStat = {
+  name: string;
+  total: string;
+  max: string;
+  avg: string;
+};
+
+function toTimeStamp(stat: string): number {
+  return new Date(`2020-01-01 ${stat}`).getTime();
+}
+
+function isMax(
+  stats: MappedStat[],
+  value: string,
+  key: keyof MappedStat
+): boolean {
+  return (
+    Math.max(...stats.map((stat) => stat[key]).map(toTimeStamp)) ===
+    toTimeStamp(value)
+  );
+}
+
 export default function LeaderBoard({ playerStats }: LeaderBoardProps) {
   if (playerStats === undefined || Object.keys(playerStats).length === 0) {
     return null;
@@ -14,11 +36,7 @@ export default function LeaderBoard({ playerStats }: LeaderBoardProps) {
     name,
     ...playerStat,
   }));
-  stats.sort(
-    (a, b) =>
-      new Date(`2020-01-01 ${b.total}`).getTime() -
-      new Date(`2020-01-01 ${a.total}`).getTime()
-  );
+  stats.sort((a, b) => toTimeStamp(b.total) - toTimeStamp(a.total));
 
   return (
     <table>
@@ -35,9 +53,23 @@ export default function LeaderBoard({ playerStats }: LeaderBoardProps) {
           return (
             <tr>
               <td>{name}</td>
-              <td>{total}</td>
-              <td>{avg}</td>
-              <td>{max}</td>
+              <td
+                className={
+                  isMax(stats, total, "total") ? "high-score" : undefined
+                }
+              >
+                {total}
+              </td>
+              <td
+                className={isMax(stats, avg, "avg") ? "high-score" : undefined}
+              >
+                {avg}
+              </td>
+              <td
+                className={isMax(stats, max, "max") ? "high-score" : undefined}
+              >
+                {max}
+              </td>
             </tr>
           );
         })}
