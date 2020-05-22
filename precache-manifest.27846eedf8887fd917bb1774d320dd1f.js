@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b52b45dd2cb9e7dcb11e9ab25feedd04",
+    "revision": "fbf033d48fdd56c5e689b3cbd0aa4b0c",
     "url": "/mtg-high-scores/index.html"
   },
   {
