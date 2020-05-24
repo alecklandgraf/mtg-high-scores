@@ -13,7 +13,8 @@ type MappedStat = {
 };
 
 function toTimeStamp(stat: string): number {
-  return new Date(`2020-01-01 ${stat}`).getTime();
+  // safari can't parse 2020-01-01T5:05, it's needs 05:05
+  return new Date(`2020-01-01T${stat.padStart(5, "0")}`).getTime();
 }
 
 function isMax(
@@ -51,7 +52,7 @@ export default function LeaderBoard({ playerStats }: LeaderBoardProps) {
       <tbody>
         {stats.map(({ name, total, avg, max }) => {
           return (
-            <tr>
+            <tr key={name}>
               <td>{name}</td>
               <td
                 className={

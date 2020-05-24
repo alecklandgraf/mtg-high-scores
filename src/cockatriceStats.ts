@@ -33,8 +33,8 @@ export default function cockatriceStats(chat: string): Stats {
       const [, d1, name] = turns[i].match(r1) || [];
       const [, d2] = turns[i + 1].match(r1) || [];
       if (d1 && d2) {
-        const date1 = new Date(`2020-01-01 ${d1}`);
-        const date2 = new Date(`2020-01-01 ${d2}`);
+        const date1 = new Date(`2020-01-01T${d1.padStart(8, "0")}`);
+        const date2 = new Date(`2020-01-01T${d2.padStart(8, "0")}`);
         const diffMilis = date2.getTime() - date1.getTime();
         const turnDurationSeconds = diffMilis / 1000;
         // console.log(`turn ${i + 1}: ${name} ${displayTime(turnDurationSeconds)}`);
@@ -43,8 +43,6 @@ export default function cockatriceStats(chat: string): Stats {
       }
     }
   }
-
-  console.log(`\n\nPlayer stats:\n`);
 
   const stats: Stats = {};
 
@@ -55,13 +53,6 @@ export default function cockatriceStats(chat: string): Stats {
       avg: displayTime(Math.floor(sum / value.length)),
       max: displayTime(Math.max(...value)),
     };
-    console.log(
-      `${player.padEnd(12)}| Total: ${displayTime(sum)} Average: ${displayTime(
-        Math.floor(sum / value.length)
-      )} Min: ${displayTime(Math.min(...value))} Max: ${displayTime(
-        Math.max(...value)
-      )}`
-    );
   });
 
   return stats;
