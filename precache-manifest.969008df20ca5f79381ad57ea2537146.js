@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "fbf033d48fdd56c5e689b3cbd0aa4b0c",
+    "revision": "b59a33e48c160d45247bf0ddfca2aacb",
     "url": "/mtg-high-scores/index.html"
   },
   {
-    "revision": "2aa551e99469040d2608",
+    "revision": "d4d9663178bf034dcff6",
     "url": "/mtg-high-scores/static/css/main.b4d458b1.chunk.css"
   },
   {
-    "revision": "75a32be97e24916fe8f2",
-    "url": "/mtg-high-scores/static/js/2.2d713a89.chunk.js"
+    "revision": "3da8b65c1e6798de6563",
+    "url": "/mtg-high-scores/static/js/2.38bd2db9.chunk.js"
   },
   {
     "revision": "e88a3e95b5364d46e95b35ae8c0dc27d",
-    "url": "/mtg-high-scores/static/js/2.2d713a89.chunk.js.LICENSE.txt"
+    "url": "/mtg-high-scores/static/js/2.38bd2db9.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "2aa551e99469040d2608",
-    "url": "/mtg-high-scores/static/js/main.a9f377a5.chunk.js"
+    "revision": "d4d9663178bf034dcff6",
+    "url": "/mtg-high-scores/static/js/main.f1819648.chunk.js"
   },
   {
     "revision": "3f5edd13a60ebefc9246",
