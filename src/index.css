@@ -13,6 +13,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   letter-spacing: 2px;
   word-spacing: 0.5em;
+  background-color: #282c34;
 }
 
 code {
@@ -47,7 +48,7 @@ td {
 }
 
 td:first-child {
-  text-align: center;
+  text-align: left;
 }
 
 .high-score {
