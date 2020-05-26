@@ -8,6 +8,7 @@ function App() {
   const [chat, setChat] = useState("");
   const [stats, setStats] = useState<undefined | Stats>();
   const [showTextArea, setShowTextArea] = useState(false);
+  const [pasted, setPasted] = useState(false);
   const [text, setText] = useState("");
 
   function handleLoadSample() {
@@ -24,6 +25,20 @@ function App() {
     setShowTextArea(false);
   }
 
+  function handleTextareaChange(event: React.ChangeEvent<HTMLTextAreaElement>) {
+    if (pasted) {
+      setChat(event.target.value);
+      setShowTextArea(false);
+      setPasted(false);
+    } else {
+      setText(event.target.value);
+    }
+  }
+
+  function handlePaste() {
+    setPasted(true);
+  }
+
   useEffect(() => {
     const newStats = cockatriceStats(chat);
     setStats(newStats);
@@ -38,9 +53,8 @@ function App() {
             <textarea
               rows={15}
               value={text}
-              onChange={(event: React.ChangeEvent<HTMLTextAreaElement>) =>
-                setText(event.target.value)
-              }
+              onChange={handleTextareaChange}
+              onPaste={handlePaste}
             />
             <button onClick={handleLoadLeaderboard}>load leaderboard</button>
           </>
