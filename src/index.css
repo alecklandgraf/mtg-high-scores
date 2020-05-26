@@ -24,6 +24,7 @@ code {
 button {
   background-color: #72a4d2;
   padding: 1px 6px;
+  margin: 3px;
   border-width: 2px;
   border-style: outset;
   border-color: -internal-light-dark-color(
@@ -54,4 +55,8 @@ td:first-child {
 .high-score {
   /* text-shadow: 0 0 5px white; */
   text-shadow: 0 0 2px #00cc00, 0 0 5px #00cc00;
+}
+
+textarea {
+  width: 336px;
 }

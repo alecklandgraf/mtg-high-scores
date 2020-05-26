@@ -7,9 +7,21 @@ import LeaderBoard from "./LeaderBoard";
 function App() {
   const [chat, setChat] = useState("");
   const [stats, setStats] = useState<undefined | Stats>();
+  const [showTextArea, setShowTextArea] = useState(false);
+  const [text, setText] = useState("");
 
   function handleLoadSample() {
     setChat(sampleChat);
+  }
+
+  function handlePasteHistory() {
+    setText("");
+    setShowTextArea(true);
+  }
+
+  function handleLoadLeaderboard() {
+    setChat(text);
+    setShowTextArea(false);
   }
 
   useEffect(() => {
@@ -21,8 +33,26 @@ function App() {
     <div className="App">
       <header className="App-header">
         MTG Player Stats
-        <button onClick={handleLoadSample}>load sample</button>
-        <LeaderBoard playerStats={stats} />
+        {showTextArea ? (
+          <>
+            <textarea
+              rows={15}
+              value={text}
+              onChange={(event: React.ChangeEvent<HTMLTextAreaElement>) =>
+                setText(event.target.value)
+              }
+            />
+            <button onClick={handleLoadLeaderboard}>load leaderboard</button>
+          </>
+        ) : (
+          <>
+            <div>
+              <button onClick={handleLoadSample}>load sample</button>
+              <button onClick={handlePasteHistory}>paste history</button>
+            </div>
+            <LeaderBoard playerStats={stats} />
+          </>
+        )}
       </header>
     </div>
   );
