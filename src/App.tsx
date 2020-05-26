@@ -53,6 +53,7 @@ function App() {
             <textarea
               rows={15}
               value={text}
+              placeholder="Chats are automatically processed when pasted here..."
               onChange={handleTextareaChange}
               onPaste={handlePaste}
             />
