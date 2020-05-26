@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b59a33e48c160d45247bf0ddfca2aacb",
+    "revision": "d575bbe663947baae3c7b9177e0fe45f",
     "url": "/mtg-high-scores/index.html"
   },
   {
-    "revision": "d4d9663178bf034dcff6",
-    "url": "/mtg-high-scores/static/css/main.b4d458b1.chunk.css"
+    "revision": "487dcde6c713857b2120",
+    "url": "/mtg-high-scores/static/css/main.c7ea4dc3.chunk.css"
   },
   {
     "revision": "3da8b65c1e6798de6563",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/mtg-high-scores/static/js/2.38bd2db9.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d4d9663178bf034dcff6",
-    "url": "/mtg-high-scores/static/js/main.f1819648.chunk.js"
+    "revision": "487dcde6c713857b2120",
+    "url": "/mtg-high-scores/static/js/main.2ac40a2f.chunk.js"
   },
   {
     "revision": "3f5edd13a60ebefc9246",
