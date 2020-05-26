@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/mtg-high-scores/static/css/main.c7ea4dc3.chunk.css",
-    "main.js": "/mtg-high-scores/static/js/main.2ac40a2f.chunk.js",
-    "main.js.map": "/mtg-high-scores/static/js/main.2ac40a2f.chunk.js.map",
+    "main.js": "/mtg-high-scores/static/js/main.a292a58a.chunk.js",
+    "main.js.map": "/mtg-high-scores/static/js/main.a292a58a.chunk.js.map",
     "runtime-main.js": "/mtg-high-scores/static/js/runtime-main.d31f5542.js",
     "runtime-main.js.map": "/mtg-high-scores/static/js/runtime-main.d31f5542.js.map",
     "static/js/2.38bd2db9.chunk.js": "/mtg-high-scores/static/js/2.38bd2db9.chunk.js",
     "static/js/2.38bd2db9.chunk.js.map": "/mtg-high-scores/static/js/2.38bd2db9.chunk.js.map",
     "index.html": "/mtg-high-scores/index.html",
-    "precache-manifest.1a0c4717b5f1689fb5bd5f80970f17eb.js": "/mtg-high-scores/precache-manifest.1a0c4717b5f1689fb5bd5f80970f17eb.js",
+    "precache-manifest.7570ef96f66b017b96e05d32df82b34c.js": "/mtg-high-scores/precache-manifest.7570ef96f66b017b96e05d32df82b34c.js",
     "service-worker.js": "/mtg-high-scores/service-worker.js",
     "static/css/main.c7ea4dc3.chunk.css.map": "/mtg-high-scores/static/css/main.c7ea4dc3.chunk.css.map",
     "static/js/2.38bd2db9.chunk.js.LICENSE.txt": "/mtg-high-scores/static/js/2.38bd2db9.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.d31f5542.js",
     "static/js/2.38bd2db9.chunk.js",
     "static/css/main.c7ea4dc3.chunk.css",
-    "static/js/main.2ac40a2f.chunk.js"
+    "static/js/main.a292a58a.chunk.js"
   ]
 }
